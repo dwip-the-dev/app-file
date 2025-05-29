@@ -1,0 +1,20 @@
+# Netlify Configuration File
+
+[build]
+  publish = "."  # Root directory
+
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"  # Inlines critical CSS
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"  # Submits sitemap automatically
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"  # Generates sitemap
+
+# Redirect HTTP to HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
